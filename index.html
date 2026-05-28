@@ -141,7 +141,7 @@
         }
         #home {
           display: grid !important;
-          grid-template-columns: minmax(0, 1fr) clamp(112px, 34vw, 136px);
+          grid-template-columns: minmax(0, 1fr) clamp(108px, 30vw, 124px);
           min-height: auto;
           align-items: start;
           column-gap: 20px;
@@ -149,12 +149,13 @@
           padding-top: 88px;
         }
         #home h1 {
-          grid-column: 1;
+          grid-column: 1 / -1;
           grid-row: 1;
           margin-bottom: 0;
           font-size: 32px;
           line-height: 1.18;
           letter-spacing: -0.03em;
+          white-space: nowrap;
         }
         #home > div:first-child {
           display: contents;
@@ -163,10 +164,11 @@
           display: contents;
         }
         #home .flex.flex-wrap.gap-3 {
-          grid-column: 1;
+          grid-column: 1 / -1;
           grid-row: 2;
           gap: 6px;
           margin-top: 6px;
+          flex-wrap: nowrap;
         }
         #home .flex.flex-wrap.gap-3 span {
           padding: 4px 8px;
@@ -174,7 +176,7 @@
           line-height: 1;
         }
         #home .text-body-lg {
-          grid-column: 1 / -1;
+          grid-column: 1;
           grid-row: 3;
           max-width: none;
           margin-top: 8px;
@@ -182,13 +184,13 @@
           line-height: 1.7;
         }
         #home > div:first-child > .flex.gap-4 {
-          grid-column: 1 / -1;
+          grid-column: 1;
           grid-row: 4;
           margin-top: 6px;
         }
         #home > div:nth-child(2) {
           grid-column: 2;
-          grid-row: 1 / span 2;
+          grid-row: 3 / span 2;
           justify-content: flex-end;
           width: 100%;
         }
