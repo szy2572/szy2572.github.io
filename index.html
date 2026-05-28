@@ -140,24 +140,61 @@
           padding-right: 20px !important;
         }
         #home {
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) clamp(112px, 34vw, 136px);
           min-height: auto;
-          padding-top: 96px;
-          gap: 32px;
+          align-items: start;
+          column-gap: 20px;
+          row-gap: 16px;
+          padding-top: 88px;
         }
         #home h1 {
-          font-size: 40px;
-          line-height: 1.15;
+          grid-column: 1;
+          grid-row: 1;
+          margin-bottom: 0;
+          font-size: 32px;
+          line-height: 1.18;
           letter-spacing: -0.03em;
         }
         #home > div:first-child {
-          width: 100%;
+          display: contents;
+        }
+        #home > div:first-child > .space-y-4 {
+          display: contents;
+        }
+        #home .flex.flex-wrap.gap-3 {
+          grid-column: 1;
+          grid-row: 2;
+          gap: 6px;
+          margin-top: 6px;
+        }
+        #home .flex.flex-wrap.gap-3 span {
+          padding: 4px 8px;
+          font-size: 11px;
+          line-height: 1;
         }
         #home .text-body-lg {
-          font-size: 16px;
-          line-height: 1.75;
+          grid-column: 1 / -1;
+          grid-row: 3;
+          max-width: none;
+          margin-top: 8px;
+          font-size: 15px;
+          line-height: 1.7;
+        }
+        #home > div:first-child > .flex.gap-4 {
+          grid-column: 1 / -1;
+          grid-row: 4;
+          margin-top: 6px;
+        }
+        #home > div:nth-child(2) {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+          justify-content: flex-end;
+          width: 100%;
         }
         #home .max-w-\[420px\] {
-          max-width: 280px;
+          max-width: 100%;
+          border-radius: 12px;
         }
         #education h2,
         #career h2,
